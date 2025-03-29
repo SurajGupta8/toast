@@ -1,2 +1,2 @@
 # toast
-Created with CodeSandbox
+Toast snackbar generator using Javascript and ReactJs
