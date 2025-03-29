@@ -1,0 +1,96 @@
+.btn-container {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1rem;
+}
+
+h1 {
+  position: absolute;
+  top: calc(50% - 7rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: blanchedalmond;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+button {
+  width: 5rem;
+  height: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: bisque;
+  border-color: bisque;
+}
+
+.toast-container {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.toast {
+  width: 12rem;
+  padding: 0.75rem;
+  color: white;
+  border-radius: 0.5rem;
+  position: relative;
+  animation: slide-in 0.5s ease-out;
+  margin: 0.5rem;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+
+  span {
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+
+.success {
+  background-color: #46af46;
+}
+.info {
+  background-color: #5899fe;
+}
+.warning {
+  background-color: #fca200;
+}
+.error {
+  background-color: #df5239;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Apply this class when you want to hide the toast */
+.toast.hide {
+  animation: slide-out 0.5s ease-out forwards;
+}
